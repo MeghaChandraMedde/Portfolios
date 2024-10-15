@@ -1,11 +1,11 @@
+image: node:latest
+
 pages:
-  stage: deploy
   script:
-  - mkdir .public
-  - cp -r * .public
-  - mv .public public
+    - mkdir .public
+    - cp -r portfolio/public_html/* .public/
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - main
+    - main  # Change this to your default branch if different
