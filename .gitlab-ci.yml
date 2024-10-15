@@ -1,9 +1,9 @@
-image: node:latest
+image: alpine:latest  # Using a lightweight image
 
 pages:
   script:
-    - mkdir .public
-    - cp -r portfolio/public_html/* .public/
+    - mkdir public  # Create the public directory
+    - cp -r public_html/* public/  # Correctly reference the path
   artifacts:
     paths:
       - public
